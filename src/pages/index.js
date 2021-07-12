@@ -1,29 +1,32 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import Button from '@material-ui/core/Button'
+import Layout from '../components/layout'
+import Image from '../components/image/image'
+import { Grid, Typography  } from '@material-ui/core'
+import image from '../images/profile-picture.png'
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
-    <Seo title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <StaticImage
-      src="../images/gatsby-astronaut.png"
-      width={300}
-      quality={95}
-      formats={["AUTO", "WEBP", "AVIF"]}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
-    />
-    <p>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-    </p>
-  </Layout>
-)
+const SimplePort = () => {
+    return (
+        <Layout>
+            <Grid 
+                container 
+                xs={8}
+                direction="row"
+                justifyContent="center"
+                alignItems="center"
+                >
+                <Grid container xs={6} justifyContent="center">
+                    <Image width="80%" imagePath={image} altText="Kanin Kearpimy" />
+                </Grid>
+                <Grid item xs={6}>
+                    <Typography variant="h2">Kanin Kearpimy</Typography>
+                    <Typography variant="h5">Software Engineer</Typography>
+                    <Typography variant="caption">Software Engineer</Typography>
+                </Grid>
+            </Grid>
+        </Layout>
+    )
+}
 
-export default IndexPage
+export default SimplePort
