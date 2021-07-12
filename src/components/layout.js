@@ -4,7 +4,7 @@ class Layout extends React.Component {
     render() {
         const { children } = this.props
         return (
-            <Grid container xs={12} justifyContent="center">
+            <Grid container xs={12} direction="column" alignItems="center">
                 { children }
             </Grid>
         )

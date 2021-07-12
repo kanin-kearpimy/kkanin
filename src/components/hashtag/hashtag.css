@@ -1,0 +1,28 @@
+.hashtag {
+    width: auto;
+    height: auto;
+    background: ghostwhite;
+    padding: 3px;
+    border-radius: 4px;
+    border: 1px gainsboro solid;
+}
+
+.hashtag.-python{
+    background-color: rgb(250, 233, 0);
+    color: rgb(73, 73, 72);
+}
+
+.hashtag.-php{
+    background-color: royalblue;
+    color: blanchedalmond;
+}
+
+.hashtag.-web{
+    background-color: rgb(106, 220, 248);
+    color: rgb(0, 0, 0);
+}
+
+.hashtag.-softskill{
+    background-color: rgb(106, 248, 177);
+    color: rgb(0, 0, 0);
+}
