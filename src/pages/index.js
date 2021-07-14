@@ -105,39 +105,16 @@ const Articles = () => {
         <Grid
             style={{marginTop: '28px'}}
             container
-            xs={6}
+            xs={9}
             direction="column"
         >
         <Typography variant="h5">Articles</Typography>
-            {/* {
-                articles.map((item, index) => {
-                    return (
-                        <List component="div" key={index}>
-                            <ListItem>
-                                <ListItemText
-                                primary={<Box component="div" style={{fontSize: '18px', display: 'flex', alignItems: 'center'}}><Assignment />{item.title}</Box>} 
-                                
-                                />
-                            </ListItem>
-                            {item.data.map((subItem, index) => {
-                                return (
-                                    <List key={index} component="div" disablePadding>
-                                        <ListItem style={{paddingLeft: '40px'}}>
-                                            <ListItemText primary={<Link style={{fontSize: '20px'}} href={subItem.link}>{subItem.text}</Link>}></ListItemText>
-                                        </ListItem>
-                                    </List>
-                                )
-                            })}
-                        </List>
-                    )
-                })
-            } */}
             {
                 articles.map((item, index) => {
                     return (
                         <Box key={index} style={{marginTop: '22px'}}>
                             <Box component="div" style={{fontSize: '18px', display: 'flex', alignItems: 'center'}}><Assignment />{item.title}</Box>
-                            <Box xs={12} component="div" style={{fontSize: '18px', display: 'flex', flexWrap: 'wrap', marginTop: '22px', justifyContent: 'space-between'}}>
+                            <Box xs={12} component="div" style={{fontSize: '18px', display: 'flex', flexWrap: 'wrap', marginTop: '22px'}}>
                                 {item.data.map((subItem, index) => {
                                     return (
                                         <CardCustomize key={index} title={subItem.text} link={subItem.link} image={subItem.image} />
